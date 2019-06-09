@@ -16,6 +16,6 @@ app.use(cors({
 }))
 app.use(bodyParser({ enableTypes: ['json'] }))
 app.use(router.routes())
-app.use('../dist')
+app.use(serveStatic('../dist'))
 
 export default app

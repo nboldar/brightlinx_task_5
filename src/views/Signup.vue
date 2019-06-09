@@ -101,13 +101,13 @@ export default {
       }).then((response) => {
         return response.json()
       }).then(json => {
-        this.isRegistered = json.isRegistered
+        this.isRegistered = json.isRegistered;
         if (this.isRegistered) {
           this.$bvModal.show('my-modal')
         }
         this.user_id = json.user_id
       }).catch(error => {
-        this.isRegistered = false
+        this.isRegistered = false;
         console.log('Произошла ошибка с ajax запросом на регистрацию: ' + error.message)
       })
     },
