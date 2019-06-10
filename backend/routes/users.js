@@ -1,5 +1,6 @@
-import UsersController from '../controllers/UsersController'
+import UsersController from '../controllers/UsersController.js'
 import Router from 'koa-router'
+import send from 'koa-send'
 
 const router = new Router()
 const usersController = new UsersController()
@@ -10,7 +11,11 @@ router.get('/users/', async (ctx, next) => {
   await usersController.index(ctx)
 })
 router.get('/', async (ctx, next) => {
-  ctx.body = 'GET /index.html'
+
+  send(ctx, ctx.path, {
+    root: './dist',
+    immutable: true
+  })
 })
 router.post('/signup', async (ctx, next) => {
   await usersController.signup(ctx)
