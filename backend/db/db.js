@@ -1,4 +1,4 @@
-let environment = 'development';
+let environment = 'production';
 let config = require('../../knexfile')[environment];
 /**
  * сущность, которая работает с запросами к базе данных
