@@ -12,16 +12,19 @@ import mount from 'koa-mount'
  * инициация приложения
  * @type {Application<any, {}>}
  */
-dotenv.config()
+if (process.env.NODE_ENV !== 'production') {
+  dotenv.config()
+}
 const app = new Koa()
 const port = process.env.PORT || 8080
+
 app.use(cors({
   origin: '*'
 }))
 app.use(bodyParser({ enableTypes: ['json'] }))
 app.use(router.routes())
-
 app.use(mount('/', send('./dist')))
+
 const server = app.listen(port)
 console.log('Server running at ' + port)
 console.log('Running in ' + process.env.NODE_ENV + ' v-' + process.env.npm_package_version)

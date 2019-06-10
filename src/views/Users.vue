@@ -19,7 +19,13 @@
           </template>
           </tbody>
         </table>
-        <div v-if="loading">Загрузка...</div>
+        <b-spinner
+          v-if="loading"
+          variant="primary"
+          label="Text Centered"
+          style="width: 3rem; height: 3rem;"
+        >
+        </b-spinner>
         <div v-if="error" class="error">
           {{ error }}
         </div>
