@@ -71,7 +71,7 @@ export default {
   },
   methods: {
     onSubmit () {
-      this.$http.post('http://localhost:4040/login', {
+      this.$http.post(window.location.origin + '/api/v1/login', {
         email: this.form.email,
         password: this.form.password
       }).then((response) => {

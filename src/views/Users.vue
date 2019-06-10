@@ -46,7 +46,7 @@ export default {
     fetchData () {
       this.error = this.users = null
       this.loading = true
-      this.$http.get('http://localhost:4040/users')
+      this.$http.get(window.location.origin + '/api/v1/users')
         .then(response => {
           this.loading = false
           return response.json()
