@@ -15,6 +15,11 @@ export default class UsersController {
     }
   }
 
+  /**
+   * контроллер передает данные на сохранение пользователя в базе данных, возвращает id пользователя
+   * @param ctx
+   * @returns {Promise<void>}
+   */
   async signup (ctx) {
     const user = new User()
 
@@ -26,6 +31,11 @@ export default class UsersController {
     }
   }
 
+  /**
+   * возвращает булево значение правильные ли данные авторизации
+   * @param ctx
+   * @returns {isAuthorized: boolean}
+   */
   async login (ctx) {
     const user = new User()
     try {

@@ -1,4 +1,5 @@
-// Update with your config settings.
+// файл конфигурации пакета для работы с базой данных
+
 if (process.env.NODE_ENV !== 'production') require('dotenv').config()
 const env = process.env
 module.exports = {
