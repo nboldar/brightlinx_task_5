@@ -1,26 +1,32 @@
-# hello-world
+# Проект с использованием стека Vue+Koa2+PostgreSQL
 
-## Project setup
+## Установка зависимостей
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Запуск dev-сервера для разработки фронтэнда Vue
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
+### Запуск бэкэнд сервера для разработки с авто-перезагрузкой
+```
+npm run dev
+```
+### компиляция проекта для продакшена
 ```
 npm run build
 ```
-
-### Run your tests
+### Запуск продакшн сервера 
+```
+npm run start
+```
+### Запуск тестов Vue приложения
 ```
 npm run test
 ```
 
-### Lints and fixes files
+### Форматирование кода Vue
 ```
 npm run lint
 ```
