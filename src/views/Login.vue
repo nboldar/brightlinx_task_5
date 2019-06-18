@@ -80,6 +80,9 @@ export default {
         this.isAuthorized = json.isAuthorized
         if (this.isAuthorized) {
           this.$bvModal.show('my-modal')
+          setTimeout(() => {
+            this.$router.push({ name: 'home' })
+          }, 1000)
         }
         console.log(this.isAuthorized)
       }).catch(error => {
