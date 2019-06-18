@@ -5,8 +5,8 @@ import Home from './views/Home.vue'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
+  mode: 'hash',
+ // base: 'http://localhost:4040/', /*process.env.BASE_URL,*/
   routes: [
     {
       path: '/',
